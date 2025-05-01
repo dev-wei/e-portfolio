@@ -6,6 +6,7 @@ import App from './App.jsx'
 // Import animation effects
 import { initializeAllEffects } from './effects/3d-effects.js'
 import { initializeAllParallaxEffects } from './effects/parallax-effects.js'
+import { initializeAllCertificateEffects } from './effects/certificate-effects.js'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -20,4 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Initialize parallax scrolling effects
   initializeAllParallaxEffects();
+  
+  // Initialize certificate animations
+  initializeAllCertificateEffects();
 });

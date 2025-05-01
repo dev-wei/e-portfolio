@@ -208,12 +208,29 @@ body {
 
 .timeline-figure {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem; /* Reduced margin slightly */
+  /* Ensure the container can hold the new SVG */
+  min-height: 680px; /* Increased height for the 650px SVG + padding */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  overflow: hidden; /* Prevent potential overflow issues */
 }
 
-.timeline-image {
-  max-width: 100%;
-  height: auto;
+.timeline-image, /* Apply to both img and object */
+.timeline-figure object {
+  /* Set explicit dimensions for the new SVG */
+  width: 800px;
+  height: 650px;
+  max-width: 100%; /* Allow shrinking on smaller screens */
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Keep hover effect, maybe make it subtler if needed */
+.timeline-figure:hover .timeline-image {
+    transform: scale(1.02); /* Slightly smaller scale for larger image */
 }
 
 .timeline-steps {
@@ -221,8 +238,21 @@ body {
 }
 
 .timeline-step {
-  margin-bottom: 2rem;
-  position: relative;
+  max-width: 420px;
+  min-width: 220px;
+  width: 100%;
+  word-break: break-word;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(90deg, #0099da 0%, #00c6fb 100%);
+  border-radius: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 153, 218, 0.08);
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.2s;
 }
 
 .step-content {
@@ -236,7 +266,17 @@ body {
 }
 
 .step-content:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  background-color: #ffffff;
+}
+
+/* Style for the active step based on hover */
+.timeline-step.active .step-content {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(52, 152, 219, 0.2);
+  border-left: 4px solid #3498db;
+  background-color: #e9f5fe;
 }
 
 .step-number {
@@ -251,8 +291,13 @@ body {
 }
 
 .step-info h4 {
-  margin: 0 0 0.5rem 0;
-  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  word-break: break-word;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .step-info p {
@@ -269,6 +314,24 @@ body {
   background-color: #e1f0fa;
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
+}
+
+/* Milestone list styling */
+.milestone-list {
+  margin-top: 0.8rem;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+.milestone-list li {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.milestone-list li:last-child {
+  margin-bottom: 0;
 }
 
 /* Responsive styles for the timeline */
