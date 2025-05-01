@@ -35,17 +35,20 @@ function ProgramOutcomeGoal2() {
       <p>As part of my professional development in dental healthcare, I have successfully completed the Bloodborne Pathogens Training through Pima Medical Institute. This training is critical for healthcare professionals to understand how to prevent the transmission of bloodborne diseases in clinical settings.</p>
       
       <div id="certificateContainerStyle" className="certificate-reveal animated-border" ref={certificateRef}>
-        {imageLoaded ? (
-          <img 
-            src="./images/bloodborne-certificate.svg" 
-            alt="Bloodborne Pathogens Training Certificate from Pima Medical Institute" 
-            id="certificateStyle"
-            className="dental-sparkle"
-            onError={() => setImageLoaded(false)}
-          />
-        ) : (
-          <p>Certificate image could not be loaded.</p>
-        )}
+        <div style={{ width: '100%', maxWidth: '800px', overflow: 'hidden' }}>
+          {imageLoaded ? (
+            <img 
+              src="./images/bloodborne-certificate.svg" 
+              alt="Bloodborne Pathogens Training Certificate from Pima Medical Institute" 
+              id="certificateStyle"
+              className="dental-sparkle"
+              onError={() => setImageLoaded(false)}
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
+          ) : (
+            <p>Certificate image could not be loaded.</p>
+          )}
+        </div>
         <p><strong>Bloodborne Pathogens Training Certification</strong></p>
         <p>Completed on October 23, 2024</p>
       </div>

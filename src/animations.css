@@ -475,6 +475,10 @@
   border-radius: 10px;
   transform-style: preserve-3d;
   perspective: 1000px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .certificate-reveal.visible {
@@ -503,6 +507,11 @@
   transform: translateZ(0px);
   filter: brightness(0.95) contrast(1.05);
   will-change: transform, filter;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .certificate-reveal.visible img {

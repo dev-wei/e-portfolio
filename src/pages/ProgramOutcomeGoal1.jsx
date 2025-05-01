@@ -35,17 +35,20 @@ function ProgramOutcomeGoal1() {
       <p>As part of my professional development in the medical field, I have successfully completed the Basic Life Support (BLS) certification program through the American Heart Association. This certification validates my skills in providing CPR and using an AED in emergency situations.</p>
       
       <div id="certificateContainerStyle" className="certificate-reveal animated-border" ref={certificateRef}>
-        {imageLoaded ? (
-          <img 
-            src="./images/bls-certificate.svg" 
-            alt="BLS Certificate from American Heart Association" 
-            id="certificateStyle"
-            className="dental-sparkle"
-            onError={() => setImageLoaded(false)}
-          />
-        ) : (
-          <p>Certificate image could not be loaded.</p>
-        )}
+        <div style={{ width: '100%', maxWidth: '800px', overflow: 'hidden' }}>
+          {imageLoaded ? (
+            <img 
+              src="./images/bls-certificate.svg" 
+              alt="BLS Certificate from American Heart Association" 
+              id="certificateStyle"
+              className="dental-sparkle"
+              onError={() => setImageLoaded(false)}
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
+          ) : (
+            <p>Certificate image could not be loaded.</p>
+          )}
+        </div>
         <p><strong>Basic Life Support (BLS) Provider Certification</strong></p>
         <p>Valid until March 2027</p>
       </div>

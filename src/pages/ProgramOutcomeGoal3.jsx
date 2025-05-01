@@ -35,17 +35,20 @@ function ProgramOutcomeGoal3() {
       <p>As part of my professional development in healthcare, I have successfully completed the HIPAA Clinical Privacy Training through Pima Medical Institute. This training is essential for understanding and maintaining patient confidentiality and privacy in healthcare settings.</p>
       
       <div id="certificateContainerStyle" className="certificate-reveal animated-border" ref={certificateRef}>
-        {imageLoaded ? (
-          <img 
-            src="./images/hipaa-certificate.svg" 
-            alt="HIPAA Clinical Privacy Training Certificate from Pima Medical Institute" 
-            id="certificateStyle"
-            className="dental-sparkle"
-            onError={() => setImageLoaded(false)}
-          />
-        ) : (
-          <p>Certificate image could not be loaded.</p>
-        )}
+        <div style={{ width: '100%', maxWidth: '800px', overflow: 'hidden' }}>
+          {imageLoaded ? (
+            <img 
+              src="./images/hipaa-certificate.svg" 
+              alt="HIPAA Clinical Privacy Training Certificate from Pima Medical Institute" 
+              id="certificateStyle"
+              className="dental-sparkle"
+              onError={() => setImageLoaded(false)}
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
+          ) : (
+            <p>Certificate image could not be loaded.</p>
+          )}
+        </div>
         <p><strong>HIPAA Clinical Privacy Training Certification</strong></p>
         <p>Completed on October 30, 2024</p>
       </div>
