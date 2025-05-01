@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Border -->
+  <rect x="10" y="10" width="780" height="580" fill="none" stroke="#000" stroke-width="4" />
+
+  <!-- Title -->
+  <text x="400" y="80" font-family="Times New Roman" font-size="48" font-weight="bold"
+    text-anchor="middle" fill="#000">HIPAA</text>
+  <text x="400" y="150" font-family="Times New Roman" font-size="36" font-weight="bold"
+    text-anchor="middle" fill="#000">CLINICAL PRIVACY TRAINING CERTIFICATE</text>
+
+  <!-- Certificate Text -->
+  <text x="400" y="220" font-family="Arial" font-size="20" text-anchor="middle" fill="#000">This
+    certificate verifies that</text>
+
+  <!-- Name -->
+  <text x="400" y="280" font-family="Brush Script MT, cursive" font-size="32" font-style="italic"
+    text-anchor="middle" fill="#000">Yiyi Huang</text>
+  <line x1="250" y1="290" x2="550" y2="290" stroke="#000" stroke-width="1" />
+
+  <!-- Additional Text -->
+  <text x="400" y="340" font-family="Arial" font-size="20" text-anchor="middle" fill="#000">Has
+    successfully completed training in the</text>
+  <text x="400" y="390" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle"
+    fill="#000">Health Insurance Portability and Accountability Act</text>
+
+  <!-- Date -->
+  <text x="400" y="440" font-family="Arial" font-size="20" text-anchor="middle" fill="#000">On</text>
+  <text x="400" y="470" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle"
+    fill="#000">October 30, 2024</text>
+
+  <!-- Logo and Signature -->
+  <text x="200" y="520" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle"
+    fill="#000">PIMA MEDICAL INSTITUTE</text>
+  <text x="600" y="520" font-family="Arial" font-size="16" text-anchor="middle" fill="#000">Andrea
+    Higgins, RDH, BS, Faculty</text>
+  <text x="600" y="545" font-family="Arial" font-size="16" text-anchor="middle" fill="#000">Dental
+    Hygiene Program</text>
+  <text x="600" y="570" font-family="Arial" font-size="16" text-anchor="middle" fill="#000">Pima
+    Medical Institute</text>
+</svg>

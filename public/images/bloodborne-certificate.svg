@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 1024 768" width="1024" height="768">
+  <rect width="1024" height="768" fill="white" stroke="black" stroke-width="6" />
+  <text x="512" y="170" font-family="Times New Roman, serif" font-size="60" font-weight="bold"
+    text-anchor="middle" stroke="black" stroke-width="1" fill="#333333">CERTIFICATE OF COMPLETION</text>
+  <text x="512" y="234" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">This
+    certificate verifies that</text>
+  <text x="512" y="294" font-family="Brush Script MT, cursive" font-size="48" text-anchor="middle">Yiyi
+    Huang</text>
+  <line x1="319" y1="310" x2="705" y2="310" stroke="black" stroke-width="2" />
+  <text x="512" y="358" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">Has
+    successfully completed</text>
+  <text x="512" y="410" font-family="Arial, sans-serif" font-size="36" font-weight="bold"
+    text-anchor="middle">Bloodborne Pathogens Training</text>
+  <text x="512" y="470" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">On</text>
+  <text x="512" y="500" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">October
+    23, 2024</text>
+  <line x1="380" y1="520" x2="644" y2="520" stroke="black" stroke-width="1" />
+  <g transform="translate(400, 570)">
+    <rect x="0" y="0" width="100" height="60" fill="white" />
+    <text x="50" y="30" font-family="Arial, sans-serif" font-size="12" font-weight="bold"
+      text-anchor="middle">PIMA</text>
+    <text x="50" y="45" font-family="Arial, sans-serif" font-size="12" font-weight="bold"
+      text-anchor="middle">MEDICAL</text>
+    <text x="50" y="60" font-family="Arial, sans-serif" font-size="12" font-weight="bold"
+      text-anchor="middle">INSTITUTE</text>
+    <line x1="0" y1="30" x2="25" y2="30" stroke="black" stroke-width="2" />
+    <line x1="0" y1="40" x2="35" y2="40" stroke="black" stroke-width="2" />
+    <line x1="0" y1="50" x2="45" y2="50" stroke="black" stroke-width="2" />
+    <line x1="0" y1="10" x2="0" y2="60" stroke="black" stroke-width="2" />
+  </g>
+  <g transform="translate(524, 560)">
+    <text x="0" y="10" font-family="Brush Script MT, cursive" font-size="18" text-anchor="start">Andrea
+      Higgins, RDH, BS</text>
+    <line x1="0" y1="15" x2="200" y2="15" stroke="black" stroke-width="1" />
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="12" text-anchor="start">Andrea
+      Higgins, RDH, BS, Faculty</text>
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="12" text-anchor="start">Dental
+      Hygiene Program</text>
+    <text x="0" y="65" font-family="Arial, sans-serif" font-size="12" text-anchor="start">Pima
+      Medical Institute</text>
+  </g>
+</svg>

@@ -1,0 +1,559 @@
+/* Enhanced Animations and Effects for Portfolio
+ * This file contains advanced CSS animations and visual effects 
+ * including 3D transforms, parallax effects, and micro-interactions
+ */
+
+/* ===== Enhanced 3D Transformations ===== */
+.transform-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform;
+}
+
+.transform-3d:hover {
+  transform: translateZ(20px) rotateX(5deg) rotateY(5deg);
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform, box-shadow;
+}
+
+.card-3d:hover {
+  transform: translateY(-15px) perspective(800px) rotateX(10deg) rotateY(15deg);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15), 0 15px 30px rgba(52, 152, 219, 0.25);
+}
+
+.card-3d .card-content {
+  transform-style: preserve-3d;
+  transform: translateZ(30px);
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-3d:hover .card-content {
+  transform: translateZ(60px);
+}
+
+.card-3d::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, transparent 50%);
+  z-index: 1;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.card-3d:hover::before {
+  opacity: 1;
+}
+
+/* ===== Parallax Effects ===== */
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  will-change: transform;
+}
+
+.parallax-deep {
+  transform: translateZ(-100px) scale(1.5);
+}
+
+.parallax-medium {
+  transform: translateZ(-50px) scale(1.25);
+}
+
+.parallax-shallow {
+  transform: translateZ(-25px) scale(1.1);
+}
+
+.parallax-top {
+  transform: translateZ(0);
+}
+
+/* ===== Glassmorphism Effects ===== */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 15px 40px rgba(31, 38, 135, 0.2);
+  transform: translateY(-10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* ===== Micro-interactions ===== */
+@keyframes pulse-subtle {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.btn-interaction {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-interaction::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+
+.btn-interaction:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-interaction:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for icons */
+.icon-hover {
+  transition: all 0.3s ease;
+}
+
+.icon-hover:hover {
+  transform: scale(1.2) rotate(5deg);
+  color: var(--accent-secondary);
+}
+
+/* ===== Enhanced Welcome Cards ===== */
+.welcome-card-enhanced {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.welcome-card-enhanced::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  transform: rotate(0deg);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 4s linear;
+  pointer-events: none;
+}
+
+.welcome-card-enhanced:hover {
+  transform: translateY(-15px) rotateX(8deg) rotateY(8deg);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1), 0 10px 25px rgba(52, 152, 219, 0.2);
+  border-color: rgba(52, 152, 219, 0.3);
+}
+
+.welcome-card-enhanced:hover::before {
+  opacity: 1;
+  transform: rotate(360deg);
+}
+
+.welcome-card-enhanced .card-content {
+  position: relative;
+  z-index: 1;
+  transform: translateZ(20px);
+}
+
+.welcome-card-enhanced .card-icon {
+  transform: translateZ(40px);
+  transition: all 0.5s ease;
+}
+
+.welcome-card-enhanced:hover .card-icon {
+  transform: translateZ(60px) scale(1.2) rotate(10deg);
+  color: var(--accent-secondary);
+}
+
+.welcome-card-enhanced h3 {
+  transform: translateZ(30px);
+  transition: all 0.5s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.welcome-card-enhanced h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gradient);
+  transition: width 0.3s ease;
+}
+
+.welcome-card-enhanced:hover h3::after {
+  width: 100%;
+}
+
+/* ===== Nav Interactive Hover States ===== */
+.nav-item-enhanced {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.nav-item-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-gradient);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.nav-item-enhanced:hover {
+  color: white;
+  transform: translateX(8px) translateZ(5px);
+}
+
+.nav-item-enhanced:hover::before {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.nav-item-enhanced::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 50%;
+  height: 300%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transform: rotate(35deg);
+  transition: all 0.55s ease;
+  opacity: 0;
+}
+
+.nav-item-enhanced:hover::after {
+  left: 150%;
+  opacity: 1;
+  transition: all 0.55s ease;
+}
+
+.nav-item-enhanced .nav-icon {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateZ(0);
+}
+
+.nav-item-enhanced:hover .nav-icon {
+  transform: scale(1.3) rotate(10deg) translateZ(15px);
+  color: white;
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+/* ===== Shine Effects ===== */
+@keyframes shine {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.shine-effect:hover::after {
+  opacity: 1;
+  left: 130%;
+  transition: all 0.7s ease;
+}
+
+/* ===== Dental-themed Decorative Elements ===== */
+.dental-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35 5c-4 0-7.9 1.4-11 4-3.1-2.6-7-4-11-4-8.8 0-16 7.2-16 16 0 9.2 7.2 15 16 15 4 0 7.9-1.4 11-4 3.1 2.6 7 4 11 4 8.8 0 16-7.2 16-16 0-9.2-7.2-15-16-15' fill='%233498db' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+  animation: dental-pattern-float 15s infinite ease-in-out;
+}
+
+@keyframes dental-pattern-float {
+  0%, 100% { background-position: 0% 0%; }
+  25% { background-position: 2% 2%; }
+  50% { background-position: 0% 4%; }
+  75% { background-position: -2% 2%; }
+}
+
+.dental-sparkle {
+  position: relative;
+  overflow: hidden;
+}
+
+.dental-sparkle::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 50%);
+  background-size: 20% 20%;
+  background-position: 0 0;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dental-sparkle:hover::after {
+  opacity: 1;
+  animation: dental-twinkle 2s infinite linear;
+}
+
+@keyframes dental-twinkle {
+  0% { background-position: 0% 0%; }
+  25% { background-position: 25% 25%; }
+  50% { background-position: 50% 50%; }
+  75% { background-position: 75% 75%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* ===== Tilt Effect ===== */
+.tilt-effect {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.tilt-element {
+  transform: translateZ(20px);
+  transition: transform 0.3s ease;
+}
+
+/* ===== Resume Section Animations ===== */
+.resume-section {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: resume-section-appear 0.8s forwards;
+  animation-delay: calc(var(--resume-section-index, 0) * 0.15s);
+}
+
+@keyframes resume-section-appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resume-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background: var(--accent-gradient);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0;
+}
+
+.resume-section:hover::before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.resume-section h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.resume-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gradient);
+  transition: width 0.4s ease;
+}
+
+.resume-section:hover h2::after {
+  width: 100%;
+}
+
+/* ===== Certificate Animation ===== */
+.certificate-reveal {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.certificate-reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotateX(0deg);
+}
+
+.certificate-reveal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 1.2s ease;
+  z-index: 5;
+}
+
+.certificate-reveal.visible::before {
+  left: 100%;
+}
+
+.certificate-reveal img {
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transform: translateZ(0px);
+  filter: brightness(0.95) contrast(1.05);
+  will-change: transform, filter;
+}
+
+.certificate-reveal.visible img {
+  filter: brightness(1) contrast(1.1);
+}
+
+.certificate-reveal:hover img {
+  transform: translateZ(30px) scale(1.03);
+  filter: brightness(1.05) contrast(1.15);
+  box-shadow: 0 15px 35px rgba(52, 152, 219, 0.2);
+}
+
+.certificate-reveal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, transparent 60%, rgba(0,0,0,0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.certificate-reveal:hover::after {
+  opacity: 1;
+}
+
+/* ===== Animated Border ===== */
+.animated-border {
+  position: relative;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.animated-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, var(--accent-color), var(--accent-secondary), var(--accent-color));
+  background-size: 300% 300%;
+  animation: border-rotate 3s linear infinite;
+  z-index: -1;
+  border-radius: calc(var(--card-radius) + 2px);
+}
+
+@keyframes border-rotate {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}

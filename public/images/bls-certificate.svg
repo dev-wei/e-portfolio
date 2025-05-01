@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- Blue header -->
+  <rect x="0" y="0" width="800" height="80" fill="#0078c8" />
+  <text x="400" y="50" font-family="Arial" font-size="32" font-weight="bold" fill="white"
+    text-anchor="middle">BASIC LIFE SUPPORT</text>
+
+  <!-- BLS Provider text -->
+  <text x="200" y="170" font-family="Arial" font-size="36" font-weight="bold" fill="#0078c8"
+    text-anchor="middle">BLS</text>
+  <text x="200" y="210" font-family="Arial" font-size="36" font-weight="bold" fill="#0078c8"
+    text-anchor="middle">Provider</text>
+
+  <!-- American Heart Association logo -->
+  <g transform="translate(600, 170) scale(0.5)">
+    <path
+      d="M0,0 C-50,-25 -75,-75 -60,-125 C-45,-175 0,-200 50,-175 C100,-150 125,-100 100,-50 C75,0 50,25 0,0 Z"
+      fill="#e31837" />
+    <path d="M0,-120 L0,-20 L10,-20 L10,-80 L20,-70 L20,-10 L0,0" fill="white" />
+  </g>
+  <text x="650" y="180" font-family="Arial" font-size="18" font-weight="bold" fill="black"
+    text-anchor="middle">American</text>
+  <text x="650" y="200" font-family="Arial" font-size="18" font-weight="bold" fill="black"
+    text-anchor="middle">Heart</text>
+  <text x="650" y="220" font-family="Arial" font-size="18" font-weight="bold" fill="black"
+    text-anchor="middle">Association.</text>
+
+  <!-- Certificate content -->
+  <text x="400" y="320" font-family="Arial" font-size="24" font-weight="bold" fill="black"
+    text-anchor="middle">Yiyi Huang</text>
+  <text x="400" y="360" font-family="Arial" font-size="14" fill="black" text-anchor="middle"
+    width="600">has successfully completed the cognitive and skills evaluations</text>
+  <text x="400" y="380" font-family="Arial" font-size="14" fill="black" text-anchor="middle"
+    width="600">in accordance with the curriculum of the American Heart Association</text>
+  <text x="400" y="400" font-family="Arial" font-size="14" fill="black" text-anchor="middle"
+    width="600">Basic Life Support (CPR and AED) Program.</text>
+
+  <!-- Certificate details -->
+  <text x="200" y="470" font-family="Arial" font-size="14" font-weight="bold" fill="black"
+    text-anchor="middle">Issue Date</text>
+  <text x="200" y="490" font-family="Arial" font-size="14" fill="black" text-anchor="middle">
+    3/14/2025</text>
+
+  <text x="600" y="470" font-family="Arial" font-size="14" font-weight="bold" fill="black"
+    text-anchor="middle">Renew By</text>
+  <text x="600" y="490" font-family="Arial" font-size="14" fill="black" text-anchor="middle">03/2027</text>
+
+  <!-- Pale red background shape -->
+  <path
+    d="M800,300 Q700,400 600,500 Q500,600 400,550 Q300,500 200,450 Q100,400 0,350 L0,600 L800,600 Z"
+    fill="#ffebee" opacity="0.5" />
+
+  <!-- Footer text -->
+  <text x="400" y="550" font-family="Arial" font-size="10" fill="black" text-anchor="middle">To view
+    or verify authenticity, students and employers should scan this QR code with their mobile device
+    or go to www.heart.org/cpr/mycards.</text>
+  <text x="400" y="570" font-family="Arial" font-size="10" fill="black" text-anchor="middle">© 2023
+    American Heart Association. All rights reserved. 20-3001 R3/23</text>
+</svg>
