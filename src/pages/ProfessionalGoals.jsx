@@ -23,7 +23,7 @@ function ProfessionalGoals() {
       <div className="career-timeline">
         <div className="timeline-container">
           <div className="timeline-figure">
-            <img src="/career-figure.svg" alt="Career progression figure" className="timeline-image" />
+            <img src="./career-figure.svg" alt="Career progression figure" className="timeline-image" />
           </div>
           <div className="timeline-steps">
             <div className="timeline-step" id="step1">

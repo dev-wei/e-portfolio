@@ -37,7 +37,7 @@ function ProgramOutcomeGoal3() {
       <div id="certificateContainerStyle" className="certificate-reveal animated-border" ref={certificateRef}>
         {imageLoaded ? (
           <img 
-            src="/images/hipaa-certificate.svg" 
+            src="./images/hipaa-certificate.svg" 
             alt="HIPAA Clinical Privacy Training Certificate from Pima Medical Institute" 
             id="certificateStyle"
             className="dental-sparkle"

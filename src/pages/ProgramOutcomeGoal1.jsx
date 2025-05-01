@@ -37,7 +37,7 @@ function ProgramOutcomeGoal1() {
       <div id="certificateContainerStyle" className="certificate-reveal animated-border" ref={certificateRef}>
         {imageLoaded ? (
           <img 
-            src="/images/bls-certificate.svg" 
+            src="./images/bls-certificate.svg" 
             alt="BLS Certificate from American Heart Association" 
             id="certificateStyle"
             className="dental-sparkle"

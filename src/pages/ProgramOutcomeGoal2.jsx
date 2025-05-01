@@ -37,7 +37,7 @@ function ProgramOutcomeGoal2() {
       <div id="certificateContainerStyle" className="certificate-reveal animated-border" ref={certificateRef}>
         {imageLoaded ? (
           <img 
-            src="/images/bloodborne-certificate.svg" 
+            src="./images/bloodborne-certificate.svg" 
             alt="Bloodborne Pathogens Training Certificate from Pima Medical Institute" 
             id="certificateStyle"
             className="dental-sparkle"
