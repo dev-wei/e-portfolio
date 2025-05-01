@@ -98,7 +98,7 @@ function App() {
         <header className="portfolio-header parallax-container">
           <h1 className="shine-effect">Yiyi Huang</h1>
           <div className="profile-icon transform-3d">
-            <img src="/images/profile-photo.jpg" alt="Yiyi Huang profile photo" />
+            <img src="./images/profile-photo.jpg" alt="Yiyi Huang profile photo" />
           </div>
         </header>
         
