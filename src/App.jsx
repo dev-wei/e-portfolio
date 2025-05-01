@@ -3,10 +3,25 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import './portfolio.css';
 import './animations.css'; // Import enhanced animations
+import './dental-theme.css'; // Import dental-specific styling
 
 // Import Font Awesome components
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBullseye, faTooth, faGraduationCap, faFileAlt, faStar, faClipboardCheck, faUserMd } from '@fortawesome/free-solid-svg-icons';
+import { 
+  faBullseye, 
+  faTooth, 
+  faTeeth, 
+  faSyringe, 
+  faGraduationCap, 
+  faFileAlt, 
+  faStar, 
+  faClipboardCheck, 
+  faUserMd, 
+  faHeartbeat, 
+  faShieldAlt, 
+  faProcedures, 
+  faHandsWash 
+} from '@fortawesome/free-solid-svg-icons';
 
 // Import pages
 import MissionVision from './pages/MissionVision';
@@ -62,26 +77,26 @@ function App() {
       default:
         return (
           <div className="welcome-content parallax-container dental-pattern">
-            <h2 className="transform-3d"><FontAwesomeIcon icon={faTooth} className="welcome-icon pulse" /> Welcome to my Portfolio</h2>
+            <h2 className="transform-3d"><FontAwesomeIcon icon={faTooth} className="welcome-icon pulse dental-icon" /> Welcome to my Dental Portfolio</h2>
             <p>Welcome to my Dental Hygienist Portfolio. This professional collection showcases my skills, philosophy, and journey in dental hygiene. Please explore the sections from the navigation menu to learn more about my qualifications and approach to patient care.</p>
             <div className="welcome-cards">
               <div className="welcome-card welcome-card-enhanced card-3d">
                 <div className="card-content">
-                  <FontAwesomeIcon icon={faBullseye} className="card-icon icon-hover" />
+                  <FontAwesomeIcon icon={faBullseye} className="card-icon dental-icon" />
                   <h3>My Mission</h3>
                   <p>Dedicated to providing exceptional dental care with compassion and expertise</p>
                 </div>
               </div>
               <div className="welcome-card welcome-card-enhanced card-3d">
                 <div className="card-content">
-                  <FontAwesomeIcon icon={faGraduationCap} className="card-icon icon-hover" />
+                  <FontAwesomeIcon icon={faTeeth} className="card-icon dental-icon" />
                   <h3>Qualifications</h3>
                   <p>Trained in advanced hygiene techniques with ongoing professional development</p>
                 </div>
               </div>
               <div className="welcome-card welcome-card-enhanced card-3d">
                 <div className="card-content">
-                  <FontAwesomeIcon icon={faUserMd} className="card-icon icon-hover" />
+                  <FontAwesomeIcon icon={faTeeth} className="card-icon dental-icon" />
                   <h3>Patient Care</h3>
                   <p>Dedicated to providing comfortable, personalized treatment experiences</p>
                 </div>
@@ -108,57 +123,57 @@ function App() {
               <ul>
                 <li className={`${selectedItem === 'mission-vision' ? 'active' : ''} nav-item-enhanced`}>
                   <a href="#" tabIndex="0" aria-label="Mission and Vision" onClick={(e) => { e.preventDefault(); handleItemClick('mission-vision'); }}>
-                    <FontAwesomeIcon icon={faBullseye} className="nav-icon icon-hover" /> Mission and Vision
+                    <FontAwesomeIcon icon={faBullseye} className="nav-icon dental-icon" /> Mission and Vision
                   </a>
                 </li>
                 <li className={`${selectedItem === 'oral-health-philosophy' ? 'active' : ''} nav-item-enhanced`}>
                   <a href="#" tabIndex="0" aria-label="Oral Health Philosophy" onClick={(e) => { e.preventDefault(); handleItemClick('oral-health-philosophy'); }}>
-                    <FontAwesomeIcon icon={faTooth} className="nav-icon icon-hover" /> Oral Health Philosophy
+                    <FontAwesomeIcon icon={faTooth} className="nav-icon dental-icon" /> Oral Health Philosophy
                   </a>
                 </li>
                 <li className={`${selectedItem === 'professional-goals' ? 'active' : ''} nav-item-enhanced`}>
                   <a href="#" tabIndex="0" aria-label="Professional Goals" onClick={(e) => { e.preventDefault(); handleItemClick('professional-goals'); }}>
-                    <FontAwesomeIcon icon={faGraduationCap} className="nav-icon icon-hover" /> Professional Goals
+                    <FontAwesomeIcon icon={faGraduationCap} className="nav-icon dental-icon" /> Professional Goals
                   </a>
                 </li>
                 <li className={`${selectedItem === 'resume' ? 'active' : ''} nav-item-enhanced`}>
                   <a href="#" tabIndex="0" aria-label="Resume" onClick={(e) => { e.preventDefault(); handleItemClick('resume'); }}>
-                    <FontAwesomeIcon icon={faFileAlt} className="nav-icon icon-hover" /> Resume
+                    <FontAwesomeIcon icon={faFileAlt} className="nav-icon dental-icon" /> Resume
                   </a>
                 </li>
                 <li className={`${selectedItem === 'program-outcome-1' ? 'active' : ''} nav-item-enhanced`}>
                   <a href="#" tabIndex="0" aria-label="Program Outcome Goal 1" onClick={(e) => { e.preventDefault(); handleItemClick('program-outcome-1'); }}>
-                    <FontAwesomeIcon icon={faStar} className="nav-icon icon-hover" /> Program Outcome Goal 1
+                    <FontAwesomeIcon icon={faHeartbeat} className="nav-icon dental-icon" /> Program Outcome Goal 1
                   </a>
                 </li>
                 <li className={`${selectedItem === 'program-outcome-2' ? 'active' : ''} nav-item-enhanced`}>
                   <a href="#" tabIndex="0" aria-label="Program Outcome Goal 2" onClick={(e) => { e.preventDefault(); handleItemClick('program-outcome-2'); }}>
-                    <FontAwesomeIcon icon={faClipboardCheck} className="nav-icon icon-hover" /> Program Outcome Goal 2
+                    <FontAwesomeIcon icon={faShieldAlt} className="nav-icon dental-icon" /> Program Outcome Goal 2
                   </a>
                 </li>
                 <li className={`${selectedItem === 'program-outcome-3' ? 'active' : ''} nav-item-enhanced`}>
                   <a href="#" tabIndex="0" aria-label="Program Outcome Goal 3" onClick={(e) => { e.preventDefault(); handleItemClick('program-outcome-3'); }}>
-                    <FontAwesomeIcon icon={faUserMd} className="nav-icon icon-hover" /> Program Outcome Goal 3
+                    <FontAwesomeIcon icon={faUserMd} className="nav-icon dental-icon" /> Program Outcome Goal 3
                   </a>
                 </li>
                 <li className={`${selectedItem === 'program-outcome-4' ? 'active' : ''} nav-item-enhanced`}>
                   <a href="#" tabIndex="0" aria-label="Program Outcome 4" onClick={(e) => { e.preventDefault(); handleItemClick('program-outcome-4'); }}>
-                    <FontAwesomeIcon icon={faStar} className="nav-icon icon-hover" /> Program Outcome Goal 4
+                    <FontAwesomeIcon icon={faHandsWash} className="nav-icon dental-icon" /> Program Outcome Goal 4
                   </a>
                 </li>
                 <li className={`${selectedItem === 'program-outcome-5' ? 'active' : ''} nav-item-enhanced`}>
                   <a href="#" tabIndex="0" aria-label="Program Outcome 5" onClick={(e) => { e.preventDefault(); handleItemClick('program-outcome-5'); }}>
-                    <FontAwesomeIcon icon={faClipboardCheck} className="nav-icon icon-hover" /> Program Outcome Goal 5
+                    <FontAwesomeIcon icon={faTooth} className="nav-icon dental-icon" /> Program Outcome Goal 5
                   </a>
                 </li>
                 <li className={`${selectedItem === 'program-outcome-6' ? 'active' : ''} nav-item-enhanced`}>
                   <a href="#" tabIndex="0" aria-label="Program Outcome 6" onClick={(e) => { e.preventDefault(); handleItemClick('program-outcome-6'); }}>
-                    <FontAwesomeIcon icon={faUserMd} className="nav-icon icon-hover" /> Program Outcome Goal 6
+                    <FontAwesomeIcon icon={faTeeth} className="nav-icon dental-icon" /> Program Outcome Goal 6
                   </a>
                 </li>
                 <li className={`${selectedItem === 'program-outcome-7' ? 'active' : ''} nav-item-enhanced`}>
                   <a href="#" tabIndex="0" aria-label="Program Outcome 7" onClick={(e) => { e.preventDefault(); handleItemClick('program-outcome-7'); }}>
-                    <FontAwesomeIcon icon={faStar} className="nav-icon icon-hover" /> Program Outcome Goal 7
+                    <FontAwesomeIcon icon={faTooth} className="nav-icon dental-icon" /> Program Outcome Goal 7
                   </a>
                 </li>
               </ul>

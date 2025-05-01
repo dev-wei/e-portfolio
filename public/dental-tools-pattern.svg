@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Dental tools pattern with dental mirrors, explorers and scalers -->
+  <g fill="#0078c8" fill-opacity="0.05">
+    <!-- Dental Mirror -->
+    <path
+      d="M20 30a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-2a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-30v12M20 14v30"
+      stroke-width="1.5" />
+
+    <!-- Dental Explorer -->
+    <path d="M60 20v25l5 5-5 5v5M60 60l-5-5 5-5" stroke-width="1.5" />
+
+    <!-- Scaler -->
+    <path d="M85 70l-5 5-15-15 5-5 15 15zM65 55V30" stroke-width="1.5" />
+
+    <!-- Dental Floss -->
+    <path d="M30 80a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM40 85a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM30 75l10 5"
+      stroke-width="1.5" />
+  </g>
+</svg>

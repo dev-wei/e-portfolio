@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Dental content pattern with molar shapes and dental tools -->
+  <g fill="#0078c8" fill-opacity="0.04">
+    <!-- Stylized Molars Pattern -->
+    <path d="M20 20c0-6 4-10 10-10s10 4 10 10c0 2-1 5-3 8-2 3-5 6-7 10-2-4-5-7-7-10-2-3-3-6-3-8z" />
+    <path d="M80 20c0-6 4-10 10-10s10 4 10 10c0 2-1 5-3 8-2 3-5 6-7 10-2-4-5-7-7-10-2-3-3-6-3-8z" />
+    <path d="M20 80c0-6 4-10 10-10s10 4 10 10c0 2-1 5-3 8-2 3-5 6-7 10-2-4-5-7-7-10-2-3-3-6-3-8z" />
+    <path d="M80 80c0-6 4-10 10-10s10 4 10 10c0 2-1 5-3 8-2 3-5 6-7 10-2-4-5-7-7-10-2-3-3-6-3-8z" />
+
+    <!-- Dental Floss Line -->
+    <path d="M40 40c0 0 10 10 20 0s20 0 20 0" stroke="#0078c8" stroke-width="1" fill="none"
+      stroke-opacity="0.05" />
+
+    <!-- Toothbrush -->
+    <path d="M60 50l-3-3 10-10 3 3-10 10zm5-10l5-2-2 5-3-3z" />
+  </g>
+</svg>

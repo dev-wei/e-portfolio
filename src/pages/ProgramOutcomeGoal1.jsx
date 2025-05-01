@@ -34,8 +34,8 @@ function ProgramOutcomeGoal1() {
       <h2>Program Outcome Goal 1</h2>
       <p>As part of my professional development in the medical field, I have successfully completed the Basic Life Support (BLS) certification program through the American Heart Association. This certification validates my skills in providing CPR and using an AED in emergency situations.</p>
       
-      <div id="certificateContainerStyle" className="certificate-reveal animated-border" ref={certificateRef}>
-        <div style={{ width: '100%', maxWidth: '800px', overflow: 'hidden' }}>
+      <div id="certificateContainerStyle" className="certificate-reveal animated-border dental-pattern" ref={certificateRef}>
+        <div style={{ width: '100%', maxWidth: '800px', margin: '0 auto', overflow: 'hidden', borderRadius: '8px' }}>
           {imageLoaded ? (
             <img 
               src="./images/bls-certificate.svg" 
@@ -43,14 +43,19 @@ function ProgramOutcomeGoal1() {
               id="certificateStyle"
               className="dental-sparkle"
               onError={() => setImageLoaded(false)}
-              style={{ maxWidth: '100%', height: 'auto' }}
+              style={{ 
+                maxWidth: '100%', 
+                height: 'auto',
+                borderRadius: '8px',
+                boxShadow: '0 4px 15px rgba(0, 0, 0, 0.08)'
+              }}
             />
           ) : (
             <p>Certificate image could not be loaded.</p>
           )}
         </div>
-        <p><strong>Basic Life Support (BLS) Provider Certification</strong></p>
-        <p>Valid until March 2027</p>
+        <p className="certificate-title"><strong>Basic Life Support (BLS) Provider Certification</strong></p>
+        <p className="certificate-date">Valid until March 2027</p>
       </div>
       
       <p>This certification is essential for healthcare providers and demonstrates my commitment to patient safety and emergency preparedness in clinical settings.</p>

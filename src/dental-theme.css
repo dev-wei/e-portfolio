@@ -1,0 +1,304 @@
+/* Dental Theme CSS for E-Portfolio
+ * This file contains dental-specific styling elements and professional color schemes
+ */
+
+:root {
+  /* Professional dental color palette - enhanced clinical look */
+  --dental-blue: #0078c8; /* More clinical blue */
+  --dental-light-blue: #e3f2fd;
+  --dental-teal: #00adc3; /* Adjusted for dental practice aesthetics */
+  --dental-mint: #b2e8e0; /* Brighter mint for fresh feel */
+  --dental-white: #ffffff; /* Pure white for clinical cleanliness */
+  --dental-off-white: #f8fafc; /* Subtle blue-white for medical feel */
+  --dental-light-gray: #eceff1; /* Softer gray with blue undertone */
+  --dental-gray: #607d8b; /* Blue-gray that feels more medical */
+  --dental-dark-gray: #37474f; /* Deeper blue-gray */
+  --dental-accent: #00bcd4; /* Brighter accent for dental appliances */
+  
+  /* Typography */
+  --font-primary: 'Montserrat', 'Arial', sans-serif;
+  --font-secondary: 'Open Sans', 'Helvetica', sans-serif;
+}
+
+/* ===== General Styling Overrides ===== */
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--dental-off-white);
+  color: var(--dental-dark-gray);
+}
+
+/* Dental Icon Styling */
+.dental-icon-container {
+  margin-bottom: 1.5rem;
+}
+
+.tooth-icon {
+  width: 80px;
+  height: 80px;
+  color: var(--dental-blue);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.header-subtitle {
+  color: var(--dental-teal);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  margin-top: 0.5rem;
+  opacity: 0.9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  color: var(--dental-blue);
+}
+
+.sidebar {
+  background-color: var(--dental-blue);
+  color: var(--dental-white);
+  border-right: none;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  color: var(--dental-white);
+  border-bottom: 2px solid var(--dental-light-blue);
+}
+
+.table-of-contents a {
+  color: var(--dental-white);
+}
+
+.table-of-contents li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.table-of-contents li.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-left: 3px solid var(--dental-white);
+}
+
+.table-of-contents li.active a {
+  color: var(--dental-white);
+}
+
+.content-section {
+  background-color: var(--dental-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.content-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("./dental-content-pattern.svg");
+  background-size: 300px 300px;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content-section > * {
+  position: relative;
+  z-index: 1;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.content-section h2 {
+  color: var(--dental-blue);
+  border-bottom: 2px solid var(--dental-light-blue);
+}
+
+/* ===== Certificate Display Styling ===== */
+.certificate-reveal {
+  background-color: var(--dental-white);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.certificate-title {
+  color: var(--dental-blue);
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.certificate-date {
+  color: var(--dental-gray);
+  font-family: var(--font-secondary);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.certificate-reveal.visible {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.certificate-reveal:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--dental-blue), var(--dental-teal));
+}
+
+.animated-border {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.animated-border::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background-image: linear-gradient(to right, var(--dental-blue), var(--dental-teal), var(--dental-blue));
+  background-size: 300% 100%;
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: border-shimmer 4s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes border-shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Dental-specific Icons and Elements ===== */
+.dental-icon {
+  color: var(--dental-blue);
+  margin-right: 0.5rem;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.dental-icon:hover, .icon-hover:hover {
+  transform: scale(1.2);
+  color: var(--dental-teal);
+}
+
+.dental-sparkle {
+  position: relative;
+  overflow: hidden;
+}
+
+.dental-sparkle::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(to bottom right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+  transform: rotate(30deg);
+  animation: sparkle 5s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes sparkle {
+  0% { top: -100%; left: -100%; }
+  50% { top: 150%; left: 150%; }
+  100% { top: -100%; left: -100%; }
+}
+
+/* Tooth pattern background */
+.dental-pattern {
+  position: relative;
+  overflow: hidden;
+}
+
+.dental-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 30c4-8 8-4 16-4s12-8 12-8-8 4-12 4-12-4-16-4-8 8-16 8-12-4-12-4 4 8 12 8 12-4 16-4z' fill='%23e8f0fe' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* Welcome cards with dental aesthetics */
+.welcome-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.welcome-card {
+  background-color: var(--dental-white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid var(--dental-blue);
+}
+
+.welcome-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-card h3 {
+  color: var(--dental-blue);
+  margin: 1rem 0;
+}
+
+.welcome-card .card-icon {
+  font-size: 2rem;
+  color: var(--dental-teal);
+  margin-bottom: 1rem;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .welcome-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .welcome-card {
+    max-width: 100%;
+  }
+  
+  .certificate-reveal {
+    padding: 1.5rem;
+  }
+}
